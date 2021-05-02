@@ -1,0 +1,1540 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+{% load static %}
+
+<head>
+  <meta charset="utf-8">
+  <title>Alphabet Kit</title>
+  <link rel="stylesheet" href="{% static 'CSS/styles.css' %}">
+  <link href="https://fonts.googleapis.com/css?family=Arvo" rel="stylesheet">
+</head>
+
+<body>
+
+<div class="navigation">
+  <a class="button" href="{% url 'logout' %}">
+  <div class="logout" float=
+  "center">BYE!</div>
+  </a>
+</div>
+
+  {% csrf_token %}
+<h2 id="welcome" >Hi {{request.user.username}}!</h2>
+  <h1 id="title" >Alphabet Kit </h1>
+  <button onclick="setThreshold()">Set threshold value</button>
+    <div id="controls">
+    </div>
+<head>
+    <!--style>
+      /* CSS comes here */
+      body {
+          font-family: arial;
+          background-image: url("{% static 'images/pic.jpg' %}");
+          background-repeat: no-repeat;
+          background-size: cover;
+      }
+      h1{
+        font-size: 5rem;
+        color: black;
+        font-family: "Lucida console", cursive;
+        text-shadow: 3px 0 #DA0463;
+      }
+      button {
+          padding:10px;
+          background-color:#6a67ce;
+          color: #FFFFFF;
+          border: 0px;
+          cursor:pointer;
+          border-radius: 5px;
+      }
+      #logout{
+        float:left;
+      }
+      #output {
+          padding:10px;
+          width: 80%;
+          line-height:30px;
+          margin-top: 20px;
+          margin-left: 130px;
+      }
+      .hide {
+          display:none;
+      }
+      .show {
+          display:block;
+      }
+    </style-->
+    <title> Speech to Text</title>
+  </head>
+  <body>
+    <!--h2>Transcribe Speech to Text</h2-->
+        <p>Click on the button below and speak something...</p>
+        <p><button type="button" onclick="runSpeechRecognition()">Speech to Text</button> &nbsp; <span id="action"></span></p>
+        <div id="output" class="hide"></div>
+    <!--script>
+      /* JS comes here */
+      var transcript;
+      var confidence;
+        function runSpeechRecognition() {
+            // get output div reference
+            var output = document.getElementById("output");
+            // get action element reference
+            var action = document.getElementById("action");
+                // new speech recognition object
+                var SpeechRecognition = SpeechRecognition || webkitSpeechRecognition;
+                var recognition = new SpeechRecognition();
+            
+                // This runs when the speech recognition service starts
+                recognition.onstart = function() {
+                    action.innerHTML = "<small>listening, please speak...</small>";
+                };
+                
+                recognition.onspeechend = function() {
+                    action.innerHTML = "<small>stopped listening, hope you are done...</small>";
+                    recognition.stop();
+                }
+              
+                // This runs when the speech recognition service returns result
+                recognition.onresult = function(event) {
+                    transcript = event.results[0][0].transcript;
+                    confidence = event.results[0][0].confidence;
+                    output.innerHTML = "<b>Text:</b> " + transcript + "<br/> <b>Confidence:</b> " + confidence*100+"%";
+                    output.classList.remove("hide");
+                };
+              
+                 // start recognition
+                 recognition.start();
+          }
+    </script-->
+  </body>
+</html>
+
+<!--style>
+body{
+  text-align: center;
+  color: #ff6699;
+  font-family: "Arvo", cursive;
+  background-color: pink;
+  </style-->
+  <div class="set">
+	<!--input type="file" accept="audio/*" capture-->
+    <div class="slideshow-container">
+
+    <div class="mySlides fade">
+      <button class="a drum">a</button>
+    </div>
+
+    <div class="mySlides fade">
+      <button class="b drum">b</button>
+    </div>
+
+    <div class="mySlides fade">
+      <button class="c drum">c</button>
+    </div>
+
+    <div class="mySlides fade">
+      <button class="d drum">d</button>
+    </div>
+
+    <div class="mySlides fade">
+      <button class="e drum">e</button>
+    </div>
+
+    <div class="mySlides fade">
+      <button class="f drum">f</button>
+    </div>
+
+    <div class="mySlides fade">
+      <button class="g drum">g</button>
+    </div>
+
+    <div class="mySlides fade">
+      <button class="h drum">h</button>
+    </div>
+
+    <div class="mySlides fade">
+      <button class="i drum">i</button>
+    </div>
+
+    <div class="mySlides fade">
+      <button class="j drum">j</button>
+    </div>
+
+    <div class="mySlides fade">
+      <button class="k drum">k</button>
+    </div>
+
+    <div class="mySlides fade">
+      <button class="l drum">l</button>
+    </div>
+
+    <div class="mySlides fade">
+      <button class="m drum">m</button>
+    </div>
+
+    <div class="mySlides fade">
+      <button class="n drum">n</button>
+    </div>
+
+    <div class="mySlides fade">
+      <button class="o drum">o</button>
+    </div>
+
+    <div class="mySlides fade">
+      <button class="p drum">p</button>
+    </div>
+
+    <div class="mySlides fade">
+      <button class="q drum">q</button>
+    </div>
+
+    <div class="mySlides fade">
+      <button class="r drum">r</button>
+    </div>
+
+    <div class="mySlides fade">
+      <button class="s drum">s</button>
+    </div>
+
+    <div class="mySlides fade">
+      <button class="t drum">t</button>
+    </div>
+
+    <div class="mySlides fade">
+      <button class="u drum">u</button>
+    </div>
+
+    <div class="mySlides fade">
+      <button class="v drum">v</button>
+    </div>
+
+    <div class="mySlides fade">
+      <button class="w drum">w</button>
+    </div>
+
+    <div class="mySlides fade">
+      <button class="x drum">x</button>
+    </div>
+
+    <div class="mySlides fade">
+      <button class="y drum">y</button>
+    </div>
+
+    <div class="mySlides fade">
+      <button class="z drum">z</button>
+    </div>
+    
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a id="next" onclick="plusSlides(1)">&#10095;</a>
+  </div>
+
+  <div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+  <span class="dot" onclick="currentSlide(4)"></span>
+  <span class="dot" onclick="currentSlide(5)"></span>
+  <span class="dot" onclick="currentSlide(6)"></span>
+  <span class="dot" onclick="currentSlide(7)"></span>
+  <span class="dot" onclick="currentSlide(8)"></span>
+  <span class="dot" onclick="currentSlide(9)"></span>
+  <span class="dot" onclick="currentSlide(10)"></span>
+  <span class="dot" onclick="currentSlide(11)"></span>
+  <span class="dot" onclick="currentSlide(12)"></span>
+  <span class="dot" onclick="currentSlide(13)"></span>
+  <span class="dot" onclick="currentSlide(14)"></span>
+  <span class="dot" onclick="currentSlide(15)"></span>
+  <span class="dot" onclick="currentSlide(16)"></span> 
+  <span class="dot" onclick="currentSlide(17)"></span> 
+  <span class="dot" onclick="currentSlide(18)"></span>
+  <span class="dot" onclick="currentSlide(19)"></span> 
+  <span class="dot" onclick="currentSlide(20)"></span> 
+  <span class="dot" onclick="currentSlide(21)"></span> 
+  <span class="dot" onclick="currentSlide(22)"></span> 
+  <span class="dot" onclick="currentSlide(23)"></span>   
+  <span class="dot" onclick="currentSlide(24)"></span>   
+  <span class="dot" onclick="currentSlide(25)"></span>
+  <span class="dot" onclick="currentSlide(26)"></span>  
+</div>
+	
+  </div>
+
+
+<script src="{% static 'Javascript/index.js' %}" charset="utf-8"></script>
+
+</body>
+</html>
+
+<style>
+@import url(https://fonts.googleapis.com/css?family=Oswald:400);
+
+.navigation {
+  width: 100%;
+  background-color: green;
+}
+
+.logout {
+  font-size: .9em;
+  font-family: 'Oswald', sans-serif;
+  position: relative;
+  overflow: hidden;
+  letter-spacing: 3px;
+  opacity: 0;
+  transition: opacity .45s;
+  -webkit-transition: opacity .35s;
+  
+}
+
+.button {
+  text-decoration: none;
+  float: left;
+  padding: 12px;
+  margin: 15px;
+  color: white;
+  width: 25px;
+  background-color: green;
+  transition: width .35s;
+  -webkit-transition: width .35s;
+  overflow: hidden
+}
+button {
+          padding:10px;
+          background-color:#6a67ce;
+          color: #FFFFFF;
+          border: 0px;
+          cursor:pointer;
+          border-radius: 5px;
+      }
+      #logout{
+        float:left;
+      }
+      #output {
+          padding:10px;
+          width: 80%;
+          line-height:30px;
+          margin-top: 20px;
+          margin-left: 130px;
+      }
+      .hide {
+          display:none;
+      }
+      .show {
+          display:block;
+      }
+a:hover {
+  width: 100px;
+}
+
+a:hover .logout{
+  opacity: .9;
+}
+
+a {
+  text-decoration: none;
+}
+  body {
+  text-align: center;
+  background-image: url("{% static 'images/background.jpg' %}");
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+h1{
+        font-size: 5rem;
+        color: pink;
+        font-family: 'Oswald', sans-serif;
+        text-shadow: 3px 0 #DA0463;
+      }
+
+h2{
+        font-size: 3rem;
+        color: purple;
+        font-family: 'Oswald', sans-serif;
+      }
+
+.a {
+  background-image: url("{% static 'images/a.jpg' %}");
+}
+
+.b {
+  background-image: url("{% static 'images/baseball_img.jpg' %}");
+}
+
+.c {
+  background-image: url("{% static 'images/c.jpg' %}");
+}
+
+.d {
+  background-image: url("{% static 'images/d.jpg' %}");
+}
+
+.e {
+  background-image: url("{% static 'images/e.jpg' %}");
+}
+
+.f {
+  background-image: url("{% static 'images/f.jpg' %}");
+}
+
+.g {
+  background-image: url("{% static 'images/g.jpg' %}");
+}
+
+.h {
+  background-image: url("{% static 'images/h.jpg' %}");
+}
+
+.i {
+  background-image: url("{% static 'images/i.jpg' %}");
+}
+
+.j {
+  background-image: url("{% static 'images/j.jpg' %}");
+}
+
+.k {
+  background-image: url("{% static 'images/k.jpg' %}");
+}
+
+.l {
+  background-image: url("{% static 'images/l.jpg' %}");
+}
+
+.m {
+  background-image: url("{% static 'images/m.jpg' %}");
+}
+
+.n {
+  background-image: url("{% static 'images/n.jpg' %}");
+}
+
+.o {
+  background-image: url("{% static 'images/o.jpg' %}");
+}
+
+.p {
+  background-image: url("{% static 'images/p.jpg' %}");
+}
+
+.q {
+  background-image: url("{% static 'images/q.jpg' %}");
+}
+
+.r {
+  background-image: url("{% static 'images/r.jpg' %}");
+}
+
+.s {
+  background-image: url("{% static 'images/s.jpg' %}");
+}
+
+.t {
+  background-image: url("{% static 'images/t.jpg' %}");
+}
+
+.u {
+  background-image: url("{% static 'images/u.jpg' %}");
+}
+
+.v {
+  background-image: url("{% static 'images/v.jpg' %}");
+}
+
+.w {
+  background-image: url("{% static 'images/w.jpg' %}");
+}
+
+.x {
+  background-image: url("{% static 'images/x.jpg' %}");
+}
+
+.y {
+  background-image: url("{% static 'images/y.jpg' %}");
+}
+
+.z {
+  background-image: url("{% static 'images/z.jpg' %}");
+}
+
+.set {
+  margin: 2% auto;
+}
+
+.pressed {
+  box-shadow: 0 3px 4px 0 #DBEDF3;
+  opacity: 0.5;
+}
+
+.red {
+  color: red;
+}
+
+.drum {
+  outline: none;
+  border: 15px solid black;
+  font-size: 0.01rem;
+  font-family: 'Arvo', cursive;
+  line-height: 2;
+  font-weight: 900;
+  color: black;
+  text-shadow: 3px 0 #DBEDF3;
+  border-radius: 15px;
+  display: inline-block;
+  width: 320px;
+  height: 320px;
+  text-align: center;
+  margin: 10px;
+  background-color: white;
+  background-size:100% 100%;
+  background-repeat:no-repeat;
+}
+
+* {box-sizing: border-box}
+body {font-family: Verdana, sans-serif; margin:0}
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+
+/* Next & previous buttons */
+.prev, #next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: black;
+  font-weight: bold;
+  font-size: 25px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+
+/* Position the "next button" to the right */
+#next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev {
+  left: 0;
+  border-radius: 3px 0 0 3px; 
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, #next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, #next,.text {font-size: 11px}
+}
+</style>
+
+<script type="text/javascript">
+  var transcript;
+  var confidence;
+  var output = document.getElementById("output");
+  var action = document.getElementById("action");
+  var SpeechRecognition = SpeechRecognition || webkitSpeechRecognition;
+  var recognition = new SpeechRecognition();
+        function runSpeechRecognition() {
+            // get output div reference
+            
+                // new speech recognition object            
+                // This runs when the speech recognition service starts
+                recognition.onstart = function() {
+                    action.innerHTML = "<small>listening, please speak...</small>";
+                };
+                
+                recognition.onspeechend = function() {
+                    action.innerHTML = "<small>stopped listening, hope you are done...</small>";
+                    recognition.stop();
+                }
+              
+                // This runs when the speech recognition service returns result
+                recognition.onresult = function(event) {
+                    transcript = event.results[0][0].transcript;
+                    confidence = event.results[0][0].confidence;
+                    output.innerHTML = "<b>Text:</b> " + transcript + "<br/> <b>Confidence:</b> " + confidence*100+"%";
+                    output.classList.remove("hide");
+                };
+              
+                 // start recognition
+                 recognition.start();
+          }
+  var numberOfDrumButtons = document.querySelectorAll(".drum").length;
+
+for (var i = 0; i < numberOfDrumButtons; i++) {
+  document.querySelectorAll(".drum")[i].addEventListener("click", function() {
+
+    var buttonInnerHTML = this.innerHTML;
+
+    makeSound(buttonInnerHTML);
+
+    buttonAnimation(buttonInnerHTML);
+    transcript="";
+  });
+
+}
+
+document.addEventListener("keypress", function(event) {
+
+  makeSound(event.key);
+
+  buttonAnimation(event.key);
+
+});
+
+var threshold=30;
+function setThreshold() {
+  threshold = prompt("Please enter a threshold value",30);
+  /*if (threshold) {
+    document.getElementById("demo").innerHTML =
+    "Hello " + person + "! How are you today?";
+  }*/
+}
+
+function levenshteinDistance(a, b){
+  if(a.length == 0) return b.length; 
+  if(b.length == 0) return a.length; 
+
+  var matrix = [];
+
+  // increment along the first column of each row
+  var i;
+  for(i = 0; i <= b.length; i++){
+    matrix[i] = [i];
+  }
+
+  // increment each column in the first row
+  var j;
+  for(j = 0; j <= a.length; j++){
+    matrix[0][j] = j;
+  }
+
+  // Fill in the rest of the matrix
+  for(i = 1; i <= b.length; i++){
+    for(j = 1; j <= a.length; j++){
+      if(b.charAt(i-1) == a.charAt(j-1)){
+        matrix[i][j] = matrix[i-1][j-1];
+      } else {
+        matrix[i][j] = Math.min(matrix[i-1][j-1] + 1, // substitution
+                                Math.min(matrix[i][j-1] + 1, // insertion
+                                         matrix[i-1][j] + 1)); // deletion
+      }
+    }
+  }
+
+  return matrix[b.length][a.length];
+};
+
+function makeSound(key) {
+
+  switch (key) {
+    case "a":
+      output.innerHTML=" ";
+      var a = new Audio("{% static 'sounds/a.mp3' %}");
+      if(!transcript)
+        a.play();
+      var dist,a1,a2;
+      if(transcript.length>1){
+        dist=levenshteinDistance("apple",transcript.toLowerCase());
+        a1="apple".length;
+        a2=transcript.length;
+      }
+      else if(transcript.length==1){
+        dist=levenshteinDistance("a",transcript.toLowerCase());
+        a1="a".length;
+        a2=transcript.length;
+      }
+      if(!transcript){
+        output.innerHTML="The accuracy is ____";
+      }
+      else if((a1+a2-dist)/(a1+a2)*100>=threshold){
+        output.innerHTML="The accuracy is "+(a1+a2-dist)/(a1+a2)*100+"%"+" <br>Great Job!!!";
+        plusSlides(0.5);
+        var b = new Audio("{% static 'sounds/Baseball.mp3' %}");
+        b.play();
+        setTimeout(runSpeechRecognition, 4000);
+      }
+      else{
+        output.innerHTML="The accuracy is "+(a1+a2-dist)/(a1+a2)*100+"%"+"<br> Try again!!!";
+      }
+      break;
+
+    case "b":
+      output.innerHTML=" ";
+      var b = new Audio("{% static 'sounds/Baseball.mp3' %}");
+      if(!transcript)
+        b.play();
+      var dist,a1,a2;
+      if(transcript.length>1){
+        dist=levenshteinDistance("baseball",transcript.toLowerCase());
+        a1="baseball".length;
+        a2=transcript.length;
+      }
+      else if(transcript.length==1){
+        dist=levenshteinDistance("b",transcript.toLowerCase());
+        a1="b".length;
+        a2=transcript.length;
+      }
+      if(!transcript){
+        output.innerHTML="The accuracy is ____";
+      }
+      else if((a1+a2-dist)/(a1+a2)*100>=threshold){
+        output.innerHTML="The accuracy is "+(a1+a2-dist)/(a1+a2)*100+"%"+" <br>Great Job!!!";
+        plusSlides(0.5);
+        var b = new Audio("{% static 'sounds/c.mp3' %}");
+        b.play();
+        setTimeout(runSpeechRecognition, 4000);
+      }
+      else{
+        output.innerHTML="The accuracy is "+(a1+a2-dist)/(a1+a2)*100+"%"+ "<br> Try again!!!";
+      }
+      break;
+
+    case "c":
+      output.innerHTML=" ";
+      var c = new Audio("{% static 'sounds/c.mp3' %}");
+      if(!transcript)
+        c.play();
+      var dist,a1,a2;
+      if(transcript.length>1){
+        dist=levenshteinDistance("cow",transcript.toLowerCase());
+        a1="cow".length;
+        a2=transcript.length;
+      }
+      else if(transcript.length==1){
+        dist=levenshteinDistance("c",transcript.toLowerCase());
+        a1="c".length;
+        a2=transcript.length;
+      }
+      if(!transcript){
+        output.innerHTML="The accuracy is ____";
+      }
+      else if((a1+a2-dist)/(a1+a2)*100>=threshold){
+        output.innerHTML="The accuracy is "+(a1+a2-dist)/(a1+a2)*100+"%"+" <br>Great Job!!!";
+        plusSlides(0.5);
+        var b = new Audio("{% static 'sounds/d.mp3' %}");
+        b.play();
+        setTimeout(runSpeechRecognition, 4000);
+      }
+      else{
+        output.innerHTML="The accuracy is "+(a1+a2-dist)/(a1+a2)*100+"%"+"<br> Try again!!!";
+      }
+      break;
+
+    case "d":
+      output.innerHTML=" ";
+      var d = new Audio("{% static 'sounds/d.mp3' %}");
+      if(!transcript)
+        d.play();
+      var dist,a1,a2;
+      if(transcript.length>1){
+        dist=levenshteinDistance("dog",transcript.toLowerCase());
+        a1="dog".length;
+        a2=transcript.length;
+      }
+      else if(transcript.length==1){
+        dist=levenshteinDistance("d",transcript.toLowerCase());
+        a1="d".length;
+        a2=transcript.length;
+      }
+      if(!transcript){
+        output.innerHTML="The accuracy is ____";
+      }
+      else if((a1+a2-dist)/(a1+a2)*100>=threshold){
+        output.innerHTML="The accuracy is "+(a1+a2-dist)/(a1+a2)*100+"%"+" <br>Great Job!!!";
+        plusSlides(0.5);
+        var b = new Audio("{% static 'sounds/e.mp3' %}");
+        b.play();
+        setTimeout(runSpeechRecognition, 4000);
+      }
+      else{
+        output.innerHTML="The accuracy is "+(a1+a2-dist)/(a1+a2)*100+"%"+"<br> Try again!!!";
+      }
+      break;
+
+    case "e":
+      output.innerHTML=" ";
+      var e = new Audio("{% static 'sounds/e.mp3' %}");
+      if(!transcript)
+        e.play();
+      var dist,a1,a2;
+      if(transcript.length>1){
+        dist=levenshteinDistance("elephant",transcript.toLowerCase());
+        a1="elephant".length;
+        a2=transcript.length;
+      }
+      else if(transcript.length==1){
+        dist=levenshteinDistance("e",transcript.toLowerCase());
+        a1="e".length;
+        a2=transcript.length;
+      }
+      if(!transcript){
+        output.innerHTML="The accuracy is ____";
+      }
+      else if((a1+a2-dist)/(a1+a2)*100>=threshold){
+        output.innerHTML="The accuracy is "+(a1+a2-dist)/(a1+a2)*100+"%"+" <br>Great Job!!!";
+        plusSlides(0.5);
+        var b = new Audio("{% static 'sounds/f.mp3' %}");
+        b.play();
+        setTimeout(runSpeechRecognition, 4000);
+      }
+      else{
+        output.innerHTML="The accuracy is "+(a1+a2-dist)/(a1+a2)*100+"%"+"<br> Try again!!!";
+      }
+      break;
+
+    case "f":
+      output.innerHTML=" ";
+      var f = new Audio("{% static 'sounds/f.mp3' %}");
+      if(!transcript)
+        f.play();
+      var dist,a1,a2;
+      if(transcript.length>1){
+        dist=levenshteinDistance("fox",transcript.toLowerCase());
+        a1="fox".length;
+        a2=transcript.length;
+      }
+      else if(transcript.length==1){
+        dist=levenshteinDistance("f",transcript.toLowerCase());
+        a1="f".length;
+        a2=transcript.length;
+      }
+      if(!transcript){
+        output.innerHTML="The accuracy is ____";
+      }
+      else if((a1+a2-dist)/(a1+a2)*100>=threshold){
+        output.innerHTML="The accuracy is "+(a1+a2-dist)/(a1+a2)*100+"%"+" <br>Great Job!!!";
+        plusSlides(0.5);
+        var b = new Audio("{% static 'sounds/g.mp3' %}");
+        b.play();
+        setTimeout(runSpeechRecognition, 4000);
+      }
+      else{
+        output.innerHTML="The accuracy is "+(a1+a2-dist)/(a1+a2)*100+"%"+"<br> Try again!!!";
+      }
+      break;
+
+    case "g":
+      output.innerHTML=" ";
+      var g = new Audio("{% static 'sounds/g.mp3' %}");
+      if(!transcript)
+        g.play();
+      var dist,a1,a2;
+      if(transcript.length>1){
+        dist=levenshteinDistance("grape",transcript.toLowerCase());
+        a1="grape".length;
+        a2=transcript.length;
+      }
+      else if(transcript.length==1){
+        dist=levenshteinDistance("g",transcript.toLowerCase());
+        a1="g".length;
+        a2=transcript.length;
+      }
+      if(!transcript){
+        output.innerHTML="The accuracy is ____";
+      }
+      else if((a1+a2-dist)/(a1+a2)*100>=threshold){
+        output.innerHTML="The accuracy is "+(a1+a2-dist)/(a1+a2)*100+"%"+" <br>Great Job!!!";
+        plusSlides(0.5);
+        var b = new Audio("{% static 'sounds/h.mp3' %}");
+        b.play();
+        setTimeout(runSpeechRecognition, 4000);
+      }
+      else{
+        output.innerHTML="The accuracy is "+(a1+a2-dist)/(a1+a2)*100+"%"+"<br> Try again!!!";
+      }
+      break;
+
+    case "h":
+      output.innerHTML=" ";
+      var h = new Audio("{% static 'sounds/h.mp3' %}");
+      if(!transcript)
+        h.play();
+      var dist,a1,a2;
+      if(transcript.length>1){
+        dist=levenshteinDistance("horse",transcript.toLowerCase());
+        a1="horse".length;
+        a2=transcript.length;
+      }
+      else if(transcript.length==1){
+        dist=levenshteinDistance("h",transcript.toLowerCase());
+        a1="h".length;
+        a2=transcript.length;
+      }
+      if(!transcript){
+        output.innerHTML="The accuracy is ____";
+      }
+      else if((a1+a2-dist)/(a1+a2)*100>=threshold){
+        output.innerHTML="The accuracy is "+(a1+a2-dist)/(a1+a2)*100+"%"+" <br>Great Job!!!";
+        plusSlides(0.5);
+        var b = new Audio("{% static 'sounds/i.mp3' %}");
+        b.play();
+        setTimeout(runSpeechRecognition, 4000);
+      }
+      else{
+        output.innerHTML="The accuracy is "+(a1+a2-dist)/(a1+a2)*100+"%"+"<br> Try again!!!";
+      }
+      break;
+
+    case "i":
+      output.innerHTML=" ";
+      var i = new Audio("{% static 'sounds/i.mp3' %}");
+      if(!transcript)
+        i.play();
+      var dist,a1,a2;
+      if(transcript.length>1){
+        dist=levenshteinDistance("icecream",transcript.toLowerCase());
+        a1="icecream".length;
+        a2=transcript.length;
+      }
+      else if(transcript.length==1){
+        dist=levenshteinDistance("i",transcript.toLowerCase());
+        a1="i".length;
+        a2=transcript.length;
+      }
+      if(!transcript){
+        output.innerHTML="The accuracy is ____";
+      }
+      else if((a1+a2-dist)/(a1+a2)*100>=threshold){
+        output.innerHTML="The accuracy is "+(a1+a2-dist)/(a1+a2)*100+"%"+" <br>Great Job!!!";
+        plusSlides(0.5);
+        var b = new Audio("{% static 'sounds/j.mp3' %}");
+        b.play();
+        setTimeout(runSpeechRecognition, 4000);
+      }
+      else{
+        output.innerHTML="The accuracy is "+(a1+a2-dist)/(a1+a2)*100+"%"+"<br> Try again!!!";
+      }
+      break;
+
+    case "j":
+      output.innerHTML=" ";
+      var j = new Audio("{% static 'sounds/j.mp3' %}");
+      if(!transcript)
+        j.play();
+      var dist,a1,a2;
+      if(transcript.length>1){
+        dist=levenshteinDistance("jar",transcript.toLowerCase());
+        a1="jar".length;
+        a2=transcript.length;
+      }
+      else if(transcript.length==1){
+        dist=levenshteinDistance("j",transcript.toLowerCase());
+        a1="j".length;
+        a2=transcript.length;
+      }
+      if(!transcript){
+        output.innerHTML="The accuracy is ____";
+      }
+      else if((a1+a2-dist)/(a1+a2)*100>=threshold){
+        output.innerHTML="The accuracy is "+(a1+a2-dist)/(a1+a2)*100+"%"+" <br>Great Job!!!";
+        plusSlides(0.5);
+        var b = new Audio("{% static 'sounds/k.mp3' %}");
+        b.play();
+        setTimeout(runSpeechRecognition, 4000);
+      }
+      else{
+        output.innerHTML="The accuracy is "+(a1+a2-dist)/(a1+a2)*100+"%"+"<br> Try again!!!";
+      }
+      break;
+
+    case "k":
+      output.innerHTML=" ";
+      var k = new Audio("{% static 'sounds/k.mp3' %}");
+      if(!transcript)
+        k.play();
+      var dist,a1,a2;
+      if(transcript.length>1){
+        dist=levenshteinDistance("kiwi",transcript.toLowerCase());
+        a1="kiwi".length;
+        a2=transcript.length;
+      }
+      else if(transcript.length==1){
+        dist=levenshteinDistance("k",transcript.toLowerCase());
+        a1="k".length;
+        a2=transcript.length;
+      }
+      if(!transcript){
+        output.innerHTML="The accuracy is ____";
+      }
+      else if((a1+a2-dist)/(a1+a2)*100>=threshold){
+        output.innerHTML="The accuracy is "+(a1+a2-dist)/(a1+a2)*100+"%"+" <br>Great Job!!!";
+        plusSlides(0.5);
+        var b = new Audio("{% static 'sounds/l.mp3' %}");
+        b.play();
+        setTimeout(runSpeechRecognition, 4000);
+      }
+      else{
+        output.innerHTML="The accuracy is "+(a1+a2-dist)/(a1+a2)*100+"%"+"<br> Try again!!!";
+      }
+      break;
+
+    case "l":
+      output.innerHTML=" ";
+      var l = new Audio("{% static 'sounds/l.mp3' %}");
+      if(!transcript)
+        l.play();
+      var dist,a1,a2;
+      if(transcript.length>1){
+        dist=levenshteinDistance("lemon",transcript.toLowerCase());
+        a1="lemon".length;
+        a2=transcript.length;
+      }
+      else if(transcript.length==1){
+        dist=levenshteinDistance("l",transcript.toLowerCase());
+        a1="l".length;
+        a2=transcript.length;
+      }
+      if(!transcript){
+        output.innerHTML="The accuracy is ____";
+      }
+      else if((a1+a2-dist)/(a1+a2)*100>=threshold){
+        output.innerHTML="The accuracy is "+(a1+a2-dist)/(a1+a2)*100+"%"+" <br>Great Job!!!";
+        plusSlides(0.5);
+        var b = new Audio("{% static 'sounds/m.mp3' %}");
+        b.play();
+        setTimeout(runSpeechRecognition, 4000);
+      }
+      else{
+        output.innerHTML="The accuracy is "+(a1+a2-dist)/(a1+a2)*100+"%"+"<br> Try again!!!";
+      }
+      break;
+
+    case "m":
+      output.innerHTML=" ";
+      var m = new Audio("{% static 'sounds/m.mp3' %}");
+      if(!transcript)
+        m.play();
+      var dist,a1,a2;
+      if(transcript.length>1){
+        dist=levenshteinDistance("monkey",transcript.toLowerCase());
+        a1="monkey".length;
+        a2=transcript.length;
+      }
+      else if(transcript.length==1){
+        dist=levenshteinDistance("m",transcript.toLowerCase());
+        a1="m".length;
+        a2=transcript.length;
+      }
+      if(!transcript){
+        output.innerHTML="The accuracy is ____";
+      }
+      else if((a1+a2-dist)/(a1+a2)*100>=threshold){
+        output.innerHTML="The accuracy is "+(a1+a2-dist)/(a1+a2)*100+"%"+" <br>Great Job!!!";
+        plusSlides(0.5);
+        var b = new Audio("{% static 'sounds/n.mp3' %}");
+        b.play();
+        setTimeout(runSpeechRecognition, 4000);
+      }
+      else{
+        output.innerHTML="The accuracy is "+(a1+a2-dist)/(a1+a2)*100+"%"+"<br> Try again!!!";
+      }
+      break;
+
+    case "n":
+      output.innerHTML=" ";
+      var n = new Audio("{% static 'sounds/n.mp3' %}");
+      if(!transcript)
+        n.play();
+      var dist,a1,a2;
+      if(transcript.length>1){
+        dist=levenshteinDistance("nest",transcript.toLowerCase());
+        a1="nest".length;
+        a2=transcript.length;
+      }
+      else if(transcript.length==1){
+        dist=levenshteinDistance("n",transcript.toLowerCase());
+        a1="n".length;
+        a2=transcript.length;
+      }
+      if(!transcript){
+        output.innerHTML="The accuracy is ____";
+      }
+      else if((a1+a2-dist)/(a1+a2)*100>=threshold){
+        output.innerHTML="The accuracy is "+(a1+a2-dist)/(a1+a2)*100+"%"+" <br>Great Job!!!";
+        plusSlides(0.5);
+        var b = new Audio("{% static 'sounds/o.mp3' %}");
+        b.play();
+        setTimeout(runSpeechRecognition, 4000);
+      }
+      else{
+        output.innerHTML="The accuracy is "+(a1+a2-dist)/(a1+a2)*100+"%"+"<br> Try again!!!";
+      }
+      break;
+
+    case "o":
+      output.innerHTML=" ";
+      var o = new Audio("{% static 'sounds/o.mp3' %}");
+      if(!transcript)
+        o.play();
+      var dist,a1,a2;
+      if(transcript.length>1){
+        dist=levenshteinDistance("owl",transcript.toLowerCase());
+        a1="owl".length;
+        a2=transcript.length;
+      }
+      else if(transcript.length==1){
+        dist=levenshteinDistance("o",transcript.toLowerCase());
+        a1="o".length;
+        a2=transcript.length;
+      }
+      if(!transcript){
+        output.innerHTML="The accuracy is ____";
+      }
+      else if((a1+a2-dist)/(a1+a2)*100>=threshold){
+        output.innerHTML="The accuracy is "+(a1+a2-dist)/(a1+a2)*100+"%"+" <br>Great Job!!!";
+        plusSlides(0.5);
+        var b = new Audio("{% static 'sounds/p.mp3' %}");
+        b.play();
+        setTimeout(runSpeechRecognition, 4000);
+      }
+      else{
+        output.innerHTML="The accuracy is "+(a1+a2-dist)/(a1+a2)*100+"%"+"<br> Try again!!!";
+      }
+      break;
+
+    case "p":
+      output.innerHTML=" ";
+      var p = new Audio("{% static 'sounds/p.mp3' %}");
+      if(!transcript)
+        p.play();
+      var dist,a1,a2;
+      if(transcript.length>1){
+        dist=levenshteinDistance("parrot",transcript.toLowerCase());
+        a1="parrot".length;
+        a2=transcript.length;
+      }
+      else if(transcript.length==1){
+        dist=levenshteinDistance("p",transcript.toLowerCase());
+        a1="p".length;
+        a2=transcript.length;
+      }
+      if(!transcript){
+        output.innerHTML="The accuracy is ____";
+      }
+      else if((a1+a2-dist)/(a1+a2)*100>=threshold){
+        output.innerHTML="The accuracy is "+(a1+a2-dist)/(a1+a2)*100+"%"+" <br>Great Job!!!";
+        plusSlides(0.5);
+        var b = new Audio("{% static 'sounds/q.mp3' %}");
+        b.play();
+        setTimeout(runSpeechRecognition, 4000);
+      }
+      else{
+        output.innerHTML="The accuracy is "+(a1+a2-dist)/(a1+a2)*100+"%"+"<br> Try again!!!";
+      }
+      break;
+
+    case "q":
+      output.innerHTML=" ";
+      var q = new Audio("{% static 'sounds/q.mp3' %}");
+      if(!transcript)
+        q.play();
+      var dist,a1,a2;
+      if(transcript.length>1){
+        dist=levenshteinDistance("queen",transcript.toLowerCase());
+        a1="queen".length;
+        a2=transcript.length;
+      }
+      else if(transcript.length==1){
+        dist=levenshteinDistance("q",transcript.toLowerCase());
+        a1="q".length;
+        a2=transcript.length;
+      }
+      if(!transcript){
+        output.innerHTML="The accuracy is ____";
+      }
+      else if((a1+a2-dist)/(a1+a2)*100>=threshold){
+        output.innerHTML="The accuracy is "+(a1+a2-dist)/(a1+a2)*100+"%"+" <br>Great Job!!!";
+        plusSlides(0.5);
+        var b = new Audio("{% static 'sounds/r.mp3' %}");
+        b.play();
+        setTimeout(runSpeechRecognition, 4000);
+      }
+      else{
+        output.innerHTML="The accuracy is "+(a1+a2-dist)/(a1+a2)*100+"%"+"<br> Try again!!!";
+      }
+      break;
+
+    case "r":
+      output.innerHTML=" ";
+      var r = new Audio("{% static 'sounds/r.mp3' %}");
+      if(!transcript)
+        r.play();
+      var dist,a1,a2;
+      if(transcript.length>1){
+        dist=levenshteinDistance("rabbit",transcript.toLowerCase());
+        a1="rabbit".length;
+        a2=transcript.length;
+      }
+      else if(transcript.length==1){
+        dist=levenshteinDistance("r",transcript.toLowerCase());
+        a1="r".length;
+        a2=transcript.length;
+      }
+      if(!transcript){
+        output.innerHTML="The accuracy is ____";
+      }
+      else if((a1+a2-dist)/(a1+a2)*100>=threshold){
+        output.innerHTML="The accuracy is "+(a1+a2-dist)/(a1+a2)*100+"%"+" <br>Great Job!!!";
+        plusSlides(0.5);
+        var b = new Audio("{% static 'sounds/s.mp3' %}");
+        b.play();
+        setTimeout(runSpeechRecognition, 4000);
+      }
+      else{
+        output.innerHTML="The accuracy is "+(a1+a2-dist)/(a1+a2)*100+"%"+"<br> Try again!!!";
+      }
+      break;
+
+    case "s":
+      output.innerHTML=" ";
+      var s = new Audio("{% static 'sounds/s.mp3' %}");
+      if(!transcript)
+        s.play();
+      var dist,a1,a2;
+      if(transcript.length>1){
+        dist=levenshteinDistance("sheep",transcript.toLowerCase());
+        a1="sheep".length;
+        a2=transcript.length;
+      }
+      else if(transcript.length==1){
+        dist=levenshteinDistance("s",transcript.toLowerCase());
+        a1="s".length;
+        a2=transcript.length;
+      }
+      if(!transcript){
+        output.innerHTML="The accuracy is ____";
+      }
+      else if((a1+a2-dist)/(a1+a2)*100>=threshold){
+        output.innerHTML="The accuracy is "+(a1+a2-dist)/(a1+a2)*100+"%"+" <br>Great Job!!!";
+        plusSlides(0.5);
+        var b = new Audio("{% static 'sounds/t.mp3' %}");
+        b.play();
+        setTimeout(runSpeechRecognition, 4000);
+      }
+      else{
+        output.innerHTML="The accuracy is "+(a1+a2-dist)/(a1+a2)*100+"%"+"<br> Try again!!!";
+      }
+      break;
+
+    case "t":
+      output.innerHTML=" ";
+      var t = new Audio("{% static 'sounds/t.mp3' %}");
+      if(!transcript)
+        t.play();
+      var dist,a1,a2;
+      if(transcript.length>1){
+        dist=levenshteinDistance("tiger",transcript.toLowerCase());
+        a1="tiger".length;
+        a2=transcript.length;
+      }
+      else if(transcript.length==1){
+        dist=levenshteinDistance("t",transcript.toLowerCase());
+        a1="t".length;
+        a2=transcript.length;
+      }
+      if(!transcript){
+        output.innerHTML="The accuracy is ____";
+      }
+      else if((a1+a2-dist)/(a1+a2)*100>=threshold){
+        output.innerHTML="The accuracy is "+(a1+a2-dist)/(a1+a2)*100+"%"+" <br>Great Job!!!";
+        plusSlides(0.5);
+        var b = new Audio("{% static 'sounds/u.mp3' %}");
+        b.play();
+        setTimeout(runSpeechRecognition, 4000);
+      }
+      else{
+        output.innerHTML="The accuracy is "+(a1+a2-dist)/(a1+a2)*100+"%"+"<br> Try again!!!";
+      }
+      break;
+
+    case "u":
+      output.innerHTML=" ";
+      var u = new Audio("{% static 'sounds/u.mp3' %}");
+      if(!transcript)
+        u.play();
+      var dist,a1,a2;
+      if(transcript.length>1){
+        dist=levenshteinDistance("unicorn",transcript.toLowerCase());
+        a1="unicorn".length;
+        a2=transcript.length;
+      }
+      else if(transcript.length==1){
+        dist=levenshteinDistance("u",transcript.toLowerCase());
+        a1="u".length;
+        a2=transcript.length;
+      }
+      if(!transcript){
+        output.innerHTML="The accuracy is ____";
+      }
+      else if((a1+a2-dist)/(a1+a2)*100>=threshold){
+        output.innerHTML="The accuracy is "+(a1+a2-dist)/(a1+a2)*100+"%"+" <br>Great Job!!!";
+        plusSlides(0.5);
+        var b = new Audio("{% static 'sounds/v.mp3' %}");
+        b.play();
+        setTimeout(runSpeechRecognition, 4000);
+      }
+      else{
+        output.innerHTML="The accuracy is "+(a1+a2-dist)/(a1+a2)*100+"%"+"<br> Try again!!!";
+      }
+      break;
+
+    case "v":
+      output.innerHTML=" ";
+      var v = new Audio("{% static 'sounds/v.mp3' %}");
+      if(!transcript)
+        v.play();
+      var dist,a1,a2;
+      if(transcript.length>1){
+        dist=levenshteinDistance("van",transcript.toLowerCase());
+        a1="van".length;
+        a2=transcript.length;
+      }
+      else if(transcript.length==1){
+        dist=levenshteinDistance("v",transcript.toLowerCase());
+        a1="v".length;
+        a2=transcript.length;
+      }
+      if(!transcript){
+        output.innerHTML="The accuracy is ____";
+      }
+      else if((a1+a2-dist)/(a1+a2)*100>=threshold){
+        output.innerHTML="The accuracy is "+(a1+a2-dist)/(a1+a2)*100+"%"+" <br>Great Job!!!";
+        plusSlides(0.5);
+        var b = new Audio("{% static 'sounds/w.mp3' %}");
+        b.play();
+        setTimeout(runSpeechRecognition, 4000);
+      }
+      else{
+        output.innerHTML="The accuracy is "+(a1+a2-dist)/(a1+a2)*100+"%"+"<br> Try again!!!";
+      }
+      break;
+
+    case "w":
+      output.innerHTML=" ";
+      var w = new Audio("{% static 'sounds/w.mp3' %}");
+      if(!transcript)
+        w.play();
+      var dist,a1,a2;
+      if(transcript.length>1){
+        dist=levenshteinDistance("watch",transcript.toLowerCase());
+        a1="watch".length;
+        a2=transcript.length;
+      }
+      else if(transcript.length==1){
+        dist=levenshteinDistance("w",transcript.toLowerCase());
+        a1="w".length;
+        a2=transcript.length;
+      }
+      if(!transcript){
+        output.innerHTML="The accuracy is ____";
+      }
+      else if((a1+a2-dist)/(a1+a2)*100>=threshold){
+        output.innerHTML="The accuracy is "+(a1+a2-dist)/(a1+a2)*100+"%"+" <br>Great Job!!!";
+        plusSlides(0.5);
+        var b = new Audio("{% static 'sounds/x.mp3' %}");
+        b.play();
+        setTimeout(runSpeechRecognition, 4000);
+      }
+      else{
+        output.innerHTML="The accuracy is "+(a1+a2-dist)/(a1+a2)*100+"%"+"<br> Try again!!!";
+      }
+      break;
+
+    case "x":
+      output.innerHTML=" ";
+      var x = new Audio("{% static 'sounds/x.mp3' %}");
+      if(!transcript)
+        x.play();
+      var dist,a1,a2;
+      if(transcript.length>1){
+        dist=levenshteinDistance("xray fish",transcript.toLowerCase());
+        a1="xray fish".length;
+        a2=transcript.length;
+      }
+      else if(transcript.length==1){
+        dist=levenshteinDistance("x",transcript.toLowerCase());
+        a1="x".length;
+        a2=transcript.length;
+      }
+      if(!transcript){
+        output.innerHTML="The accuracy is ____";
+      }
+      else if((a1+a2-dist)/(a1+a2)*100>=threshold){
+        output.innerHTML="The accuracy is "+(a1+a2-dist)/(a1+a2)*100+"%"+" <br>Great Job!!!";
+        plusSlides(0.5);
+        var b = new Audio("{% static 'sounds/y.mp3' %}");
+        b.play();
+        setTimeout(runSpeechRecognition, 4000);
+      }
+      else{
+        output.innerHTML="The accuracy is "+(a1+a2-dist)/(a1+a2)*100+"%"+"<br> Try again!!!";
+      }
+      break;
+
+    case "y":
+      output.innerHTML=" ";
+      var y = new Audio("{% static 'sounds/y.mp3' %}");
+      if(!transcript)
+        y.play();
+      var dist,a1,a2;
+      if(transcript.length>1){
+        dist=levenshteinDistance("yak",transcript.toLowerCase());
+        a1="yak".length;
+        a2=transcript.length;
+      }
+      else if(transcript.length==1){
+        dist=levenshteinDistance("y",transcript.toLowerCase());
+        a1="y".length;
+        a2=transcript.length;
+      }
+      if(!transcript){
+        output.innerHTML="The accuracy is ____";
+      }
+      else if((a1+a2-dist)/(a1+a2)*100>=threshold){
+        output.innerHTML="The accuracy is "+(a1+a2-dist)/(a1+a2)*100+"%"+" <br>Great Job!!!";
+        plusSlides(0.5);
+        var b = new Audio("{% static 'sounds/z.mp3' %}");
+        b.play();
+        setTimeout(runSpeechRecognition, 4000);
+      }
+      else{
+        output.innerHTML="The accuracy is "+(a1+a2-dist)/(a1+a2)*100+"%"+"<br> Try again!!!";
+      }
+      break;
+
+    case "z":
+      output.innerHTML=" ";
+      var z = new Audio("{% static 'sounds/z.mp3' %}");
+      if(!transcript) 
+        z.play();
+      var dist,a1,a2;
+      if(transcript.length>1){
+        dist=levenshteinDistance("zoo",transcript.toLowerCase());
+        a1="zoo".length;
+        a2=transcript.length;
+      }
+      else if(transcript.length==1){
+        dist=levenshteinDistance("z",transcript.toLowerCase());
+        a1="z".length;
+        a2=transcript.length;
+      }
+      if(!transcript){
+        output.innerHTML="The accuracy is ____";
+      }
+      else if((a1+a2-dist)/(a1+a2)*100>=threshold){
+        output.innerHTML="The accuracy is "+(a1+a2-dist)/(a1+a2)*100+"%"+" <br>Great Job!!!";
+      }
+      else{
+        output.innerHTML="The accuracy is "+(a1+a2-dist)/(a1+a2)*100+"%"+"<br> Try again!!!";
+      }
+      break;
+
+    default: console.log(key);
+
+  }
+}
+
+
+function buttonAnimation(currentKey) {
+
+  var activeButton = document.querySelector("." + currentKey);
+
+  activeButton.classList.add("pressed");
+
+  setTimeout(function() {
+    activeButton.classList.remove("pressed");
+  }, 100);
+
+}
+
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+<script src="https://cdn.rawgit.com/mattdiamond/Recorderjs/08e7abd9/dist/recorder.js"></script>

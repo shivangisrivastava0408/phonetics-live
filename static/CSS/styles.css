@@ -1,0 +1,150 @@
+body {
+  text-align: center;
+  background-color: #283149;
+}
+
+h1 {
+  font-size: 5rem;
+  color: #DBEDF3;
+  font-family: "Arvo", cursive;
+  text-shadow: 3px 0 #DA0463;
+
+}
+
+.a {
+  background-image: url("{% static 'images/a.jpg' %}");
+}
+
+.b {
+  background-image: url("{% static 'images/b.jpg' %}");
+}
+
+.c {
+  background-image: url("{% static 'images/c.jpg' %}");
+}
+
+.d {
+  background-image: url("{% static 'images/d.jpg' %}");
+}
+
+.e {
+  background-image: url("{% static 'images/e.jpg' %}");
+}
+
+.f {
+  background-image: url("{% static 'images/f.jpg' %}");
+}
+
+.g {
+  background-image: url("{% static 'images/g.jpg' %}");
+}
+
+.h {
+  background-image: url("{% static 'images/h.jpg' %}");
+}
+
+.i {
+  background-image: url("{% static 'images/i.jpg' %}");
+}
+
+.j {
+  background-image: url("{% static 'images/j.jpg' %}");
+}
+
+.k {
+  background-image: url("{% static 'images/k.jpg' %}");
+}
+
+.l {
+  background-image: url("{% static 'images/l.jpg' %}");
+}
+
+.m {
+  background-image: url("{% static 'images/m.jpg' %}");
+}
+
+.n {
+  background-image: url("{% static 'images/n.jpg' %}");
+}
+
+.o {
+  background-image: url("{% static 'images/o.jpg' %}");
+}
+
+.p {
+  background-image: url("{% static 'images/p.jpg' %}");
+}
+
+.q {
+  background-image: url("{% static 'images/q.jpg' %}");
+}
+
+.r {
+  background-image: url("{% static 'images/r.jpg' %}");
+}
+
+.s {
+  background-image: url("{% static 'images/s.jpg' %}");
+}
+
+.t {
+  background-image: url("{% static 'images/t.jpg' %}");
+}
+
+.u {
+  background-image: url("{% static 'images/u.jpg' %}");
+}
+
+.v {
+  background-image: url("{% static 'images/v.jpg' %}");
+}
+
+.w {
+  background-image: url("{% static 'images/w.jpg' %}");
+}
+
+.x {
+  background-image: url("{% static 'images/x.jpg' %}");
+}
+
+.y {
+  background-image: url("{% static 'images/y.jpg' %}");
+}
+
+.z {
+  background-image: url("{% static 'images/z.jpg' %}");
+}
+
+.set {
+  margin: 10% auto;
+}
+
+.pressed {
+  box-shadow: 0 3px 4px 0 #DBEDF3;
+  opacity: 0.5;
+}
+
+.red {
+  color: red;
+}
+
+.drum {
+  outline: none;
+  border: 10px solid #404B69;
+  font-size: 5rem;
+  font-family: 'Arvo', cursive;
+  line-height: 2;
+  font-weight: 900;
+  color: #DA0463;
+  text-shadow: 3px 0 #DBEDF3;
+  border-radius: 15px;
+  display: inline-block;
+  width: 200px;
+  height: 200px;
+  text-align: center;
+  margin: 10px;
+  background-color: white;
+  background-size:100% 100%;
+  background-repeat:no-repeat;
+}
+

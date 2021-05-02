@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+{% load static %}
+
+<head>
+  <meta charset="utf-8">
+  <title>Alphabet Kit</title>
+  <link rel="stylesheet" href="{% static 'CSS/styles.css' %}">
+  <link href="https://fonts.googleapis.com/css?family=Arvo" rel="stylesheet">
+</head>
+
+<body>
+  <h1 id="title">Alphabet Kit</h1>
+  {% csrf_token %}
+<p>The speech recognised is: {{a}} </p>
+</body>
+
+<style >
+	h1 {
+  color: #ff6699;
+  font-size: 2rem;
+  font-family: "Arvo", cursive;
+  text-shadow: 2px 0 #DA0463;
+}
+body{
+	background-color: pink;
+}
+</style>
