@@ -15,8 +15,8 @@
 		<input type="text" name="username" placeholder="Username"><br><br>
 		<input type="email" name="email" placeholder="Email"><br><br>
 		<input type="text" name="age" placeholder="Age"><br><br>
-		<input type="password" name="password1" placeholder="Password"><br><br>
-		<input type="password" name="password2" placeholder="Confirm password"><br><br>
+		<input type="password" name="password1" placeholder="Password" minlength="8"><br><br>
+		<input type="password" name="password2" placeholder="Confirm password" minlength="8"><br><br>
 		</div>
 		<input class="btn" type="Submit"><br><br>
 		<center><a class="btn" text-decoration="none" href="{% url 'login' %}">Log In</a></center>
